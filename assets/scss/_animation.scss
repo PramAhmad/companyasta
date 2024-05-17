@@ -1,0 +1,234 @@
+
+//>>>>> Video Animation Start <<<<<//
+@-webkit-keyframes rippleOne {
+    70% {
+        -webkit-box-shadow: 0 0 0 40px rgba(244, 68, 56, 0);
+        box-shadow: 0 0 0 40px rgba(244, 68, 56, 0);
+    }
+    100% {
+        -webkit-box-shadow: 0 0 0 0 rgba(244, 68, 56, 0);
+        box-shadow: 0 0 0 0 rgba(244, 68, 56, 0);
+    }
+}
+
+@keyframes rippleOne {
+    70% {
+        -webkit-box-shadow: 0 0 0 40px rgba(244, 68, 56, 0);
+        box-shadow: 0 0 0 40px rgba(244, 68, 56, 0);
+    }
+    100% {
+        -webkit-box-shadow: 0 0 0 0 rgba(244, 68, 56, 0);
+        box-shadow: 0 0 0 0 rgba(244, 68, 56, 0);
+    }
+}
+//>>>>> Video Animation End <<<<<//
+
+
+
+//>>>>> Circle Animation Start <<<<<//
+@keyframes cir36 {
+    100%{
+        transform: rotate(360deg);
+    }
+}
+
+@keyframes rounded {
+    50%{
+        transform: rotate(15deg);
+    }
+}
+
+//>>>>> Circle Animation End <<<<<//
+
+
+
+
+//>>>>> Preloader Animation Start <<<<<//
+ @-webkit-keyframes spinner {
+	to {
+		-webkit-transform: rotateZ(360deg);
+		transform: rotateZ(360deg);
+	}
+}
+
+@keyframes spinner {
+	to {
+		-webkit-transform: rotateZ(360deg);
+		transform: rotateZ(360deg);
+	}
+}
+
+@-webkit-keyframes letters-loading {
+	0%,
+	75%,
+	100% {
+		opacity: 0;
+		transform: rotateY(-90deg);
+	}
+	25%,
+	50% {
+		opacity: 1;
+		transform: rotateY(0deg);
+	}
+}
+
+@keyframes letters-loading {
+	0%,
+	75%,
+	100% {
+		opacity: 0;
+		transform: rotateY(-90deg);
+	}
+	25%,
+	50% {
+		opacity: 1;
+		transform: rotateY(0deg);
+	}
+}
+
+//>>>>> Preloader Animation Start <<<<<//
+@keyframes loaderspin {
+	0% {
+	  transform: translate(-50%, -50%) rotate(0deg);
+	}
+	100% {
+	  transform: translate(-50%, -50%) rotate(360deg);
+	}
+}
+
+
+@keyframes tpswing{
+	0% {
+    -webkit-transform: rotate(20deg);
+    -ms-transform:rotate(20deg);
+    transform: rotate(20deg);
+	}
+    100% { 
+      -webkit-transform: rotate(0deg);
+      -ms-transform:rotate(0deg);
+      transform: rotate(0deg);
+	}
+}
+
+
+@keyframes width {
+	0% {
+	  width: 0%;
+	}
+	100% {
+	  width: 100%;
+	}
+}
+
+@-webkit-keyframes width {
+	0% {
+		width: 0%;
+	  }
+	  100% {
+		width: 100%;
+	}
+}
+
+@-webkit-keyframes loaderspin {
+0% {
+	transform: translate(-50%, -50%) rotate(0deg);
+}
+100% {
+	transform: translate(-50%, -50%) rotate(360deg);
+}
+}
+
+@keyframes loaderpulse {
+0% {
+	transform: scale(1);
+}
+100% {
+	transform: scale(1.2);
+}
+}
+//>>>>> Preloader Animation End <<<<<//
+
+//animation
+@keyframes rounded {
+    50%{
+        transform: rotate(20deg);
+    }
+}
+
+@keyframes cir36 {
+	100% {
+			  transform: rotate(360deg);
+	}
+}
+
+.float-bob-y {
+	-webkit-animation-name: float-bob-y;
+	animation-name: float-bob-y;
+	-webkit-animation-duration: 3s;
+	animation-duration: 3s;
+	-webkit-animation-iteration-count: infinite;
+	animation-iteration-count: infinite;
+	-webkit-animation-timing-function: linear;
+	animation-timing-function: linear;
+  }
+  
+  @-webkit-keyframes float-bob-y {
+	0% {
+	  -webkit-transform: translateY(-30px);
+	  transform: translateY(-30px);
+	}
+	50% {
+	  -webkit-transform: translateY(-10px);
+	  transform: translateY(-10px);
+	}
+	100% {
+	  -webkit-transform: translateY(-30px);
+	  transform: translateY(-30px);
+	}
+}
+
+  @keyframes float-bob-y {
+	0% {
+	  -webkit-transform: translateY(-30px);
+	  transform: translateY(-30px);
+	}
+	50% {
+	  -webkit-transform: translateY(-10px);
+	  transform: translateY(-10px);
+	}
+	100% {
+	  -webkit-transform: translateY(-30px);
+	  transform: translateY(-30px);
+	}
+}
+  
+@keyframes shine {
+    from {
+      -webkit-mask-position: 150%;
+    }
+    
+    to {
+      -webkit-mask-position: -50%;
+    }
+}
+
+@keyframes bounce-x {
+	0% {
+	  -webkit-transform: translateX(0);
+			  transform: translateX(0);
+	}
+	50% {
+	  -webkit-transform: translateX(30px);
+			  transform: translateX(30px);
+	}
+	100% {
+	  -webkit-transform: translateX(0);
+			  transform: translateX(0);
+	}
+}
+
+.bounce-x {
+	-webkit-animation: bounce-x 7s infinite linear;
+	animation: bounce-x 7s infinite linear;
+}
+

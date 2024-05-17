@@ -1,0 +1,369 @@
+
+.contact-form-items {
+
+    .form-clt {
+        span {
+            color: $white;
+            margin-bottom: 20px;
+            display: inline-block;
+        }
+
+        input,textarea {
+            width: 100%;
+            outline: none;
+            border: none;
+            background-color: transparent;
+            border: 1px solid $white;
+            color: $white;
+            padding: 18px 20px;
+
+            @include breakpoint (max-md){
+                padding: 14px 20px;
+            }
+
+            @include breakpoint (max-sm){
+                padding: 12px 18px;
+            }
+
+            &::placeholder {
+                color: #ffffffb3;
+            }
+        }
+
+        textarea {
+            padding-bottom: 70px;
+        }
+    }
+}
+
+.contact-wrapper {
+    margin-top: -140px;
+    overflow: hidden;
+    position: relative;
+    z-index: 9;
+
+    @include breakpoint (max-xxl){
+        margin-top: -185px;
+    }
+
+    @include breakpoint (max-xl){
+        margin-top: -130px;
+    }
+
+    @include breakpoint (max-lg){
+        margin-top: 0;
+    }
+
+    .arrow-shape {
+        position: absolute;
+        bottom: 0;
+        right: 0;
+    }
+
+    &::before {
+        @include before;
+        background-color: $theme-color;
+        z-index: -1;
+        top: 20%;
+
+        @include breakpoint (max-xl){
+            top: 15%;
+        }
+
+        @include breakpoint (max-lg){
+            top: initial;
+        }
+    }
+
+    .contact-image {
+        height: 725px;
+        position: absolute;
+        bottom: 0;
+        left: 100px;
+
+        @include breakpoint (max-xl){
+          left: 20px;
+          height: 590px;
+        }
+
+        @include breakpoint (max-lg){
+            display: none
+        }
+    
+        img {
+            @include imgw;
+            object-fit: cover;
+        }
+
+        .cricle-shape {
+            position: absolute;
+            top: 24%;
+            left: -81px;
+            z-index: -1;
+            animation: cir36 10s linear infinite;
+        }
+
+        .small-cricle-shape {
+            position: absolute;
+            left: 60%;
+            top: 25%;
+            animation: cir36 10s linear infinite;
+        }
+
+        .frame-shape {
+            position: absolute;
+            left: -47px;
+            bottom: -14px;
+            animation: rounded 5s linear infinite;
+        }
+    }
+
+    .contact-content {
+        padding: 0 60px 80px 0;
+        margin-left: 50px;
+        margin-top: 250px;
+
+        @include breakpoint (max-xl){
+           margin-top: 210px;
+        }
+
+        @include breakpoint (max-lg){
+           margin-top: 0;
+           margin-left: 0;
+           padding: 0;
+        }
+
+        @include breakpoint (max-lg){
+           padding: 50px;
+        }
+
+        @include breakpoint (max-md){
+            padding: 50px 40px;
+        }
+
+        @include breakpoint (max-sm){
+            padding: 40px 30px;
+        }
+    }
+}
+
+.contact-info-area {
+    padding-top: 100px;
+    @include flex;
+    justify-content: space-between;
+    border-bottom: 1px solid #242449;
+
+    @include breakpoint (max-xl){
+        flex-wrap: wrap;
+        gap: 40px;
+        padding-top: 85px;
+        justify-content: initial;
+    }
+
+    @include breakpoint (max-sm){
+        gap: 30px;
+    }
+
+    .contact-info-items {
+        @include flex;
+        gap: 20px;
+        justify-content: space-between;
+        position: relative;
+        padding-bottom: 40px;
+
+        @include breakpoint (max-xl){
+            flex-wrap: wrap;
+            padding-bottom: 80px;
+        }
+
+        &:not(:last-child){
+            border-right: 1px solid #242449;
+            padding-right: 100px;
+            height: 110px;
+
+            @include breakpoint (max-xxl){
+                border: none;
+            }
+
+            @include breakpoint (max-xl){
+                border: none;
+                height: initial;
+                padding: 0;
+            }
+        }
+
+        .icon {
+            width: 65px;
+            height: 65px;
+            line-height: 65px;
+            text-align: center;
+            position: relative;
+
+            &::before {
+                @include before;
+                background-repeat: no-repeat;
+                background-size: cover;
+                background-image: url('../../assets/img/circle-2.png');
+                animation: cir36 10s linear infinite;
+            }
+        }
+
+        .content {
+            p {
+                color: $white;
+                margin-bottom: 5px;
+            }
+
+            h3 {
+                font-size: 24px;
+                color: $white;
+
+                a {
+                    color: $white;
+                }
+            }
+        }
+    }
+}
+
+.contact-wrapper-2 {
+    .contact-left-items {
+        .contact-info-area-2 {
+            padding: 40px;
+            background-color: $theme-color;
+
+            .contact-info-items {
+                @include flex;
+                gap: 20px;
+                position: relative;
+                padding-bottom: 20px;
+                border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+        
+                @include breakpoint (max-xl){
+                    flex-wrap: wrap;
+                }
+        
+                .icon {
+                    width: 65px;
+                    height: 65px;
+                    line-height: 65px;
+                    text-align: center;
+                    position: relative;
+        
+                    &::before {
+                        @include before;
+                        background-repeat: no-repeat;
+                        background-size: cover;
+                        background-image: url('../../assets/img/circle-3.png');
+                        animation: cir36 10s linear infinite;
+                    }
+                }
+        
+                .content {
+                    p {
+                        color: $white;
+                        margin-bottom: 5px;
+                    }
+        
+                    h3 {
+                        font-size: 24px;
+                        color: $white;
+        
+                        a {
+                            color: $white;
+                        }
+                    }
+                }
+
+                &.border-none {
+                    border: none !important;
+                }
+            }
+        }
+
+        .video-image {
+            position: relative;
+
+            img {
+                @include imgw;
+            }
+
+            .video-box {
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%,-50%);
+                z-index: 9;
+        
+                .video-btn {
+                    display: inline-block;
+                    width: 60px;
+                    height: 60px;
+                    line-height: 60px;
+                    text-align: center;
+                    border-radius: 50%;
+                    color: $theme-color;
+                    background-color: $white;
+                }
+        
+                .ripple {
+                    &::before,&::after {
+                        box-shadow: 0 0 0 0 rgba(255, 255, 255, 0.8);
+                    }
+                }
+            }
+        }
+    }
+
+    .contact-content {
+        margin-left: 40px;
+
+        @include breakpoint (max-lg){
+            margin-left: 0;
+        }
+
+        h2 {
+            margin-bottom: 10px;
+        }
+
+        .contact-form-items {
+            margin-top: 30px;
+
+            .form-clt {
+                span {
+                    color: $header-color;
+                    font-weight: 600;
+                    text-transform: capitalize;
+                }
+        
+                input,textarea {
+                    border: 1px solid $border-color;
+                    color: $text-color;
+                    padding: 18px 20px;
+                    border-radius: 5px;
+
+                    &::placeholder {
+                        color: $text-color;
+                    }
+                }
+        
+                textarea {
+                    padding-bottom: 150px;
+                }
+            }
+        }
+    }
+}
+
+.map-items {
+    .googpemap {
+        iframe {
+            width: 100%;
+            height: 600px;
+
+            @include breakpoint (max-sm){
+                height: 400px;
+            }
+        }
+    }
+}

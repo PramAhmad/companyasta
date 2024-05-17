@@ -1,0 +1,123 @@
+//>>>>> Component Button Here <<<<<//
+.theme-btn {
+    background-color: $theme-color;
+    color: $white;
+    display: inline-block;
+    font-size: 16px;
+    font-weight: 600;
+    padding: 24px 40px;
+    border-radius: 0;
+    text-transform: capitalize;
+    -webkit-transition: all 0.3s ease-in-out;
+    transition: all 0.3s ease-in-out;
+    position: relative;
+    z-index: 1;
+    line-height: 1;
+
+    &::before {
+        content: "";
+        background-color: $header-color;
+        width: 0;
+        height: 50%;
+        position: absolute;
+        top: 0;
+        left: 0;
+        -webkit-transition: all 0.3s cubic-bezier(0.785, 0.135, 0.15, 0.86);
+        transition: all 0.3s cubic-bezier(0.785, 0.135, 0.15, 0.86);
+        z-index: -1;
+    }
+
+    &::after {
+        content: "";
+        background-color: $header-color;
+        width: 0;
+        height: 50%;
+        position: absolute;
+        bottom: 0;
+        right: 0;
+        -webkit-transition: all 0.3s cubic-bezier(0.785, 0.135, 0.15, 0.86);
+        transition: all 0.3s cubic-bezier(0.785, 0.135, 0.15, 0.86);
+        z-index: -1;
+    }
+
+    i {
+        margin-left: 10px;
+    }
+
+    &:hover {
+       color: $white;
+
+        &::before,&::after {
+            width: 100%;
+        }
+    }
+
+    &.hover-white {
+        &::before,&::after {
+            background-color: $white;
+        }
+
+        &:hover {
+            color: $header-color;
+        }
+    }
+
+    &.bg-white {
+        background-color: $white;
+        color: $header-color;
+
+        &:hover {
+            color: $white;
+        }
+    }
+
+    &.border-white {
+        border: 1px solid $white;
+        background-color: transparent;
+        padding: 22px 40px;
+
+        @include breakpoint (max-md){
+            padding: 18px 32px;
+        }
+    
+        @include breakpoint (max-sm){
+            padding: 16px 30px;
+        }
+
+        &::before,&::after {
+            background-color: $white;
+        }
+
+        &:hover {
+            color: $header-color !important;
+        }
+    }
+
+    @include breakpoint (max-md){
+        padding: 20px 32px;
+    }
+
+    @include breakpoint (max-sm){
+        padding: 18px 30px;
+        font-size: 14px;
+    }
+}
+
+.theme-btn-2 {
+    font-size: 16px;
+    display: inline-block;
+    font-weight: 600;
+    color: $text-color;
+    text-transform: capitalize;
+
+    i {
+        margin-left: 10px;
+    }
+
+    &:hover {
+        color: $theme-color;
+    }
+}
+
+
+//>>>>> Component Button End <<<<<//

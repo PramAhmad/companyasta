@@ -1,0 +1,121 @@
+
+.marquee-wrapper {
+    position: relative;
+    overflow: hidden;
+    white-space: nowrap;
+    background-color: $theme-color;
+    z-index: 9;
+
+    &.style-2 {
+        background-color: transparent;
+        line-height: 55px;
+        margin-bottom: -39px;
+
+        @include breakpoint (max-md){
+            margin-bottom: -50px;
+        }
+    }
+}
+
+.text-slider {
+    font-size: 50px;
+    height: 100px;
+    line-height: 90px;
+    font-weight: 700;
+    text-transform: capitalize;
+    color: $white;
+    
+    &:not(:last-child){
+        margin-right: 30px;
+    }
+
+    @include breakpoint (max-md){
+        font-size: 36px;
+    }
+
+    img {
+        margin-bottom: 10px;
+    }
+}
+
+.marquee-inner {
+    position: absolute;
+    display: inline-flex;
+    width: 200%;
+}
+
+.marquee-list {
+    float: left;
+    width: 50%;
+}
+
+.marquee-item {
+    float: left;
+    transition: animation 0.2s ease-out;
+
+    &.style-2 {
+        .text-slider {
+            text-transform: capitalize;
+            font-size: 60px;
+            color: $header-color;
+            margin-right: 40px;
+            line-height: 0;
+            height: 65px;
+
+            @include breakpoint (max-md){
+                font-size: 36px;
+            }
+        }
+
+        .text-style {
+            @include transition;
+            background-image: linear-gradient($theme-color,$theme-color);
+            background-position: 0 95%;
+            background-repeat: no-repeat;
+            background-size: 0% 2px;
+
+            &:hover {
+                color: $theme-color;
+                background-size: 100% 3px;
+            }
+        }
+    }
+}
+
+.marquee-inner.to-left {
+    animation: marqueeLeft 25s linear infinite;
+}
+
+@keyframes marqueeLeft {
+    0% {
+        left: 0;
+    }
+    100% {
+        left: -100%;
+    }
+}
+
+.marquee-inner.to-right {
+    animation: marqueeRight 25s linear infinite;
+}
+
+@keyframes marqueeRight {
+    0% {
+       right : 0;
+    }
+    100% {
+        right: -100%;
+    }
+}
+
+.marque-section-2 {
+    position: relative;
+
+    
+    &::before {
+        @include before;
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-image: url(../../assets/img/service/service-bg-2.jpg);
+    }
+}

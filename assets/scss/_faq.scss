@@ -1,0 +1,173 @@
+
+.faq-section {
+    position: relative;
+
+    @include breakpoint (max-xl){
+        padding-bottom: 0;
+        margin-bottom: -15px;
+    }
+    
+    .faq-shape-box {
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        max-width: 847px;
+        width: 100%;
+        z-index: -1;
+        height: 950px;
+
+        @include breakpoint (max-xl){
+            display: none;
+        }
+
+        .faq-shape {
+            position: absolute;
+            top: 0;
+            left: 0;
+            bottom: 0;
+    
+            img {
+                @include imgw;
+                object-fit: cover;
+            }
+        }
+    }
+
+    .right-shape {
+        position: absolute;
+        top: 0;
+        right: 0;
+
+        @include breakpoint (max-xxl){
+            display: none;
+        }
+    }
+
+    &.style-2 {
+        @include breakpoint (max-xl){
+            margin-top: -100px;
+        }
+
+        @include breakpoint (max-md){
+            margin-top: -90px;
+        }
+    }
+}
+
+
+.faq-content {
+    .accordion-item {
+        border: 0;
+        background-color: $white;
+
+        .accordion-header { 
+            .accordion-button { 
+                font-weight: 600;
+                color: $theme-color;
+                letter-spacing: -.2px;
+                border: 0;
+                border-radius: 0;
+                box-shadow: none;
+                background-color: $bg-color;
+                padding: 25px 30px 0;
+                text-transform: capitalize;
+                font-size: 20px;
+                border: 1px solid $border-color;
+                border: 1px solid transparent;
+
+                &::after {
+                    // content: "\2b";
+                    // font-family: "Font Awesome 6 Free";
+                    // background: transparent;
+                    font-weight: 500;
+                    transition: all 0.3s ease-in-out !important;
+                    background-image: url(../../assets/img/chevron-right.svg);
+                    color: $theme-color-2;
+                }
+                &:not(.collapsed)::after {
+                    // content: "\f068";
+                    // font-family: "Font Awesome 6 Free";
+                    // background: transparent;
+                    background-image: url(../../assets/img/chevron-down.svg);
+                    font-weight: 500;
+                    color: $theme-color-2;
+                    transform: rotate(0);
+                }
+
+                &.collapsed {
+                    background-color: transparent;
+                    border: 1px solid $border-color;
+                    padding: 25px 30px;
+                    color: $header-color;
+                }
+              
+            }
+        }
+
+        .accordion-collapse { 
+
+            .accordion-body {
+                padding-right: 150px;
+                padding-left: 30px;
+                padding-top: 15px;
+                color: $text-color;
+                background-color: $bg-color;
+
+                @include breakpoint (max-xxl){
+                    padding-right: 50px;
+                }
+
+                @include breakpoint (max-lg){
+                    padding-right: 30px;
+                }
+            }
+        }
+    }
+
+    &.style-2 {
+        margin-left: 50px;
+
+        @include breakpoint (max-xl){
+            margin-left: 20px;
+        }
+
+        @include breakpoint (max-lg){
+            margin-left: 0;
+        }
+    }
+    
+    &.style-3 {
+        margin-top: 40px;
+
+        .accordion-item {
+            border: 0;
+            background-color: $white;
+            box-shadow: $shadow;
+    
+            .accordion-header { 
+                .accordion-button { 
+                    background-color: $white;
+                    font-size: 20px;
+                    border: none;
+                }
+            }
+
+            .accordion-collapse { 
+
+                .accordion-body {
+                   background-color: $white;
+                   padding-bottom: 30px;
+                }   
+            }
+        }
+    }
+}
+
+.faq-wrapper {
+    .faq-image {
+        img {
+            @include imgw;
+        }
+    }
+}

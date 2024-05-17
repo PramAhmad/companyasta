@@ -1,0 +1,126 @@
+/* --------------------------------------------
+    Template Default Fonts & Fonts Styles
+ ---------------------------------------------- */
+
+ @import url('https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@100..900&display=swap');
+
+$heading-font: 'Kumbh Sans', sans-serif;
+$body-font: 'Kumbh Sans', sans-serif;
+
+//font-family: "Font Awesome 6 Free";
+$fa: "Font Awesome 6 Free";
+
+body {
+    font-family: $body-font;
+    font-size: 16px;
+    font-weight: normal;
+    line-height: 28px;
+    color: $text-color;
+    background-color: $white;
+	padding: 0;
+	margin: 0;
+	overflow-x: hidden;
+}
+
+ul {
+	padding: 0;
+	margin: 0;
+	list-style: none;
+}
+
+button {
+    border: none;
+    background-color: transparent;
+	padding: 0;
+}
+
+input:focus{
+	color: $white;
+	outline: none;
+}
+
+input{
+	color: $white;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-family: $heading-font;
+    margin: 0px;
+	padding: 0;
+    color: $header-color;
+	text-transform: capitalize;
+	@include transition;
+}
+
+h1 {
+	font-size: 80px;
+	font-weight: 700;
+	line-height: 112%;
+}
+
+h2 {
+	font-size: 40px;
+	line-height: 125%;
+	font-weight: 700;
+
+	@include breakpoint(max-xl){
+		font-size: 34px;
+	}
+
+	@include breakpoint(max-md){
+		font-size: 32px;
+	}
+
+	@include breakpoint(max-sm){
+		font-size: 28px;
+	}
+}
+h3 {
+	font-size: 22px;
+	font-weight: 600;
+
+	@include breakpoint(max-sm){
+		font-size: 20px;
+	}
+}
+
+h4 {
+	font-size: 20px;
+	font-weight: 600;
+	line-height: 130%;
+}
+
+h5 {
+	font-size: 18px;
+	font-weight: 500;
+}
+
+h6 {
+	font-size: 16px;
+	font-weight: 600;
+	line-height: 145%;
+}
+
+a {
+    text-decoration: none;
+    outline: none !important;
+    cursor: pointer;
+    color: $header-color;
+	@include transition;
+}
+
+p {
+    margin: 0px;
+	@include transition;
+}
+
+span {
+	margin: 0px;
+	@include transition;
+}
+

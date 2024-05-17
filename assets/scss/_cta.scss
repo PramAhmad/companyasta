@@ -1,0 +1,215 @@
+.cta-section {
+    position: relative;
+
+    &::before {
+        @include before;
+        background-color: $header-color;
+        z-index: -1;
+        top: 50%;
+    }
+}
+
+.cta-wrapper {
+    padding: 65px 70px;
+    background-color: $theme-color;
+    position: relative;
+    margin-top: 125px;
+
+    @include breakpoint (max-xl){
+        margin-top: 0;
+    }
+
+    @include breakpoint (max-md){
+        padding: 55px;
+    }
+
+    @include breakpoint (max-sm){
+        padding: 45px;
+    }
+
+    .mask-shape {
+        position: absolute;
+        top: 0;
+        left: 21%;
+
+        @include breakpoint (max-xl){
+            display: none
+        }
+    }
+
+    .circle-shape {
+        position: absolute;
+        bottom: 10px;
+        left: 80px;
+        animation: cir36 10s linear infinite;
+
+        @include breakpoint (max-xl){
+            display: none;
+        }
+    }
+
+    .cta-image {
+        position: absolute;
+        bottom: 0;
+        left: 100px;
+        height: 357px;
+        max-width: 393px;
+        
+        @include breakpoint (max-xxl){
+           left: 30px;
+        }
+        
+        @include breakpoint (max-xl){
+            display: none;
+        }
+    }
+
+    .cta-items {
+        @include flex;
+        justify-content: space-between;
+        margin-left: 512px;
+        position: relative;
+        z-index: 9;
+
+        @include breakpoint (max-xxl){
+            margin-left: 350px;
+        }
+
+        @include breakpoint (max-xl){
+            margin-left: 0;
+        }
+
+        @include breakpoint (max-md){
+           flex-wrap: wrap;
+           justify-content: center;
+           gap: 30px;
+           text-align: center;
+        }
+
+        @include breakpoint (max-sm){
+            gap: 20px;
+        }
+
+        h3 {
+            font-size: 32px;
+            font-weight: bold;
+            color: $white;
+            line-height: 156%;
+
+            @include breakpoint (max-md){
+                font-size: 28px;
+            }
+
+            @include breakpoint (max-sm){
+                font-size: 24px;
+            }
+        }
+    }
+}
+
+.cta-banner-2 {
+    position: relative;
+    z-index: 9;
+
+    &::before {
+        @include before;
+        background-color: $white;
+        z-index: -1;
+        top: 50%;
+    }
+
+    .cta-wrapper-2 {
+        padding: 55px 60px;
+        background-color: $theme-color;
+        @include flex;
+        justify-content: space-between;
+
+        @include breakpoint (max-lg){
+            flex-wrap: wrap;
+            gap: 30px;
+            justify-content: center;
+        }
+
+        .author-icon {
+            @include flex;
+            gap: 20px;
+            position: relative;
+
+            &::before {
+                position: absolute;
+                top: 0;
+                bottom: 0;
+                right: -50%;
+                content: "";
+                height: 85px;
+                width: 14px;
+                background-repeat: no-repeat;
+                background-size: cover;
+                background-image: url('../../assets/img/bar.png');
+
+                @include breakpoint (max-xxl){
+                    display: none;
+                }
+            }
+
+            .icon {
+                width: 48px;
+                height: 48px;
+                line-height: 48px;
+                text-align: center;
+                background-color: $white;
+                text-align: center;
+                color: $theme-color;
+                border-radius: 50%;
+                position: relative;
+
+                &::before {
+                    position: absolute;
+                    top: 50%;
+                    left: 50%;
+                    right: 0;
+                    bottom: 0;
+                    width: 60px;
+                    height: 60px;
+                    border-radius: 50%;
+                    border: 1px solid $white;
+                    content: "";
+                    transform: translate(-50%,-50%);
+                }
+                
+            }
+
+            .content {
+                h4 {
+                    font-weight: 600;
+                    
+                    a {
+                        color: $white;
+                    }
+                }
+
+                span {
+                    font-size: 14px;
+                    font-weight: 600;
+                    color: $white;
+                    margin-bottom: 5px;
+                    display: inline-block;
+                }
+            }
+        }
+
+        h3 {
+            font-size: 32px;
+            color: $white;
+            line-height: 156%;
+
+            @include breakpoint (max-sm){
+                font-size: 26px;
+            }
+
+            @include breakpoint (max-lg){
+                text-align: center;
+            }
+        }
+    }
+}
